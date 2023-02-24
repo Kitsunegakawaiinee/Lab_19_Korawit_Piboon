@@ -126,12 +126,14 @@ void searchGrade(vector <string> names, vector <int> scores, vector <char> grade
         cout << endl; // debug
     }
 
-    for(int i = 0; i<index.size(); i++) cout << index[i] << endl;
+    //for(int i = 0; i<index.size(); i++) cout << index[i] << endl; debug
 
-    for (unsigned int i = 0; i < index.size(); i++)
-    {
-        cout << names[index[i]]+" (" << scores[index[i]] <<")" << endl;
-    }
+    if (index.size() == 0) cout << "---------------------------------\nCannot found.\n---------------------------------\n";
+    else
+        for (unsigned int i = 0; i < index.size(); i++)
+        {
+            cout << names[index[i]]+" (" << scores[index[i]] <<")" << endl;
+        };
 }
 
 
